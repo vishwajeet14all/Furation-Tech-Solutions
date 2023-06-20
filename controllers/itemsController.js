@@ -5,6 +5,9 @@ const Item = require('../model/item');
 
 
 
+
+
+
 //*@desc Get all items
 //*@route GET /items
 //*@access public
@@ -19,7 +22,7 @@ const getItems = asyncHandler(async (req, res) => {
 //*@route GET /items/:id
 //*@access public
 const getItem = asyncHandler(async (req, res) => {
-  console.log("req.body", req.body);
+  // console.log("req.body", req.body);
   const item = await Item.findById(req.params.id);
   if (!item) {
     res.status(404);
@@ -35,8 +38,7 @@ const getItem = asyncHandler(async (req, res) => {
 //*@route POST /items
 //*@access public
 const createItem = asyncHandler(async (req, res) => {
-  console.log("req.body", req.body);
-
+  // console.log("req.body", req.body);
   const { item, email } = req.body;
   if (!item || !email) {
     res.status(400);
@@ -55,7 +57,7 @@ const createItem = asyncHandler(async (req, res) => {
 //*@route PUT /items/:id
 //*@access public
 const updateItem = asyncHandler(async (req, res) => {
-  console.log("req.body", req.body);
+  // console.log("req.body", req.body);
   const item = await Item.findById(req.params.id);
   if (!item) {
     res.status(404);
@@ -73,13 +75,13 @@ const updateItem = asyncHandler(async (req, res) => {
 //*@route DELETE /items/:id
 //*@access public
 const deleteItem = asyncHandler(async (req, res) => {
-  console.log("req.body", req.body);
+  // console.log("req.body", req.body);
   const item = await Item.findById(req.params.id);  
   if (!item) {
     res.status(404);
     throw new Error("Contact not found");
   }
-  await Item.deleteOne(req.params.id)
+  await Item.deleteOne()
   return res.status(200).json({ message: item });
 });
 

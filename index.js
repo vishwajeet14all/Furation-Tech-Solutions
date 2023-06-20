@@ -13,7 +13,6 @@ const PORT = 8000;
 app.use(express.json())
 app.use("/items",require("./routes/itemRoute"))
 app.use("/items",require("./routes/itemRoute"))
-
 app.use(errorHandler)
 
 
