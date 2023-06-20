@@ -7,9 +7,9 @@
 
 ## Tech Stack Used
 
-**Client:** Node, Express, MongoD, Postman
+**Client:** Postman
 
-**Server:** Node, Express
+**Server:** Node, Express, MongoDB, Mongoose
 
 
 ## API Reference
