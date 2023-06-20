@@ -1,18 +1,11 @@
 
-## Node module install
-- npm install
+## Install Node module run : npm install
 
 
-## Note
-
-To run this project : npm start
+## To run this project : npm start
 
 
-
-
-
-
-## Tech Stack
+## Tech Stack Used
 
 **Client:** Node, Express, MongoD, Postman
 
@@ -38,13 +31,13 @@ To run this project : npm start
 
 
 
-####Put item
+#### Put item
 
 ![put](https://github.com/vishwajeet14all/Furation-Tech-Solutions/assets/126787994/59d5d90e-6113-443a-80cd-14a339f47a3b)
 
 
 
-####delete item
+#### Delete item
 
 ![delete](https://github.com/vishwajeet14all/Furation-Tech-Solutions/assets/126787994/a05e7179-fde7-4bad-8561-164b85780117)
 
