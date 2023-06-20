@@ -1,6 +1,7 @@
 //*for error handling
 const asyncHandler = require("express-async-handler")
 const Item = require('../model/item');
+const jwt = require("jsonwebtoken")
 
 
 
@@ -47,7 +48,7 @@ const createItem = asyncHandler(async (req, res) => {
   const emailAvailable = await Item.findOne({email})
   if(emailAvailable){
     res.status(400);
-    throw new Error("Email already exits")
+    throw new Error("Email already in database")
   }
   const items = await Item.create({
     item,
