@@ -44,6 +44,11 @@ const createItem = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("All fields are mandatory");
   }  
+  const emailAvailable = await Item.findOne({email})
+  if(emailAvailable){
+    res.status(400);
+    throw new Error("Email already exits")
+  }
   const items = await Item.create({
     item,
     email,
